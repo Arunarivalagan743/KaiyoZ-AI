@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* AI Skill Matcher - Design Tokens */
+@theme {
+  /* Primary Colors */
+  --color-primary: #1C3D5A;
+  --color-primary-light: #2A5A80;
+  --color-primary-dark: #152D43;
+  
+  /* Secondary Colors */
+  --color-secondary: #4CBBA0;
+  --color-secondary-light: #6DD4B9;
+  --color-secondary-dark: #3A9A83;
+  
+  /* Neutral Colors */
+  --color-neutral: #F7F9FA;
+  --color-neutral-dark: #E8ECEF;
+  --color-neutral-darker: #D1D7DC;
+  
+  /* Text Colors */
+  --color-text-primary: #1C3D5A;
+  --color-text-secondary: #5A6B7A;
+  --color-text-light: #8A9AAA;
+  
+  /* Font Family */
+  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif;
+  
+  /* Border Radius - Sharper */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  
+  /* No Shadows - Clean flat design */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+}
+
+/* Remove all box shadows globally */
+* {
+  box-shadow: none !important;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-neutral);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus States for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-darker);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-light);
+}
+
+/* Font Display Class for Poppins */
+.font-display {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+

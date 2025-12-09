@@ -1,0 +1,12 @@
+/* App-specific styles - Most styles are handled by Tailwind */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Root container */
+#root {
+  min-height: 100vh;
+}
+

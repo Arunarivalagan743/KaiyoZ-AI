@@ -1,0 +1,20 @@
+// Components Index - Export all components
+export { default as Button } from './Button';
+export { default as Card } from './Card';
+export { default as Input } from './Input';
+export { default as Avatar } from './Avatar';
+export { default as SkillTag } from './SkillTag';
+export { default as Navigation } from './Navigation';
+export { default as AuthModal } from './AuthModal';
+export { default as HeroSection } from './HeroSection';
+export { default as FeaturesSection } from './FeaturesSection';
+export { default as StatsSection } from './StatsSection';
+export { default as TestimonialsSection } from './TestimonialsSection';
+export { default as CTASection } from './CTASection';
+export { default as WorkerProfileCard } from './WorkerProfileCard';
+export { default as JobPostCard } from './JobPostCard';
+export { default as WorkersShowcase } from './WorkersShowcase';
+export { default as JobsShowcase } from './JobsShowcase';
+export { default as ResumePreview } from './ResumePreview';
+export { default as Footer } from './Footer';
+export * from './Icons';
